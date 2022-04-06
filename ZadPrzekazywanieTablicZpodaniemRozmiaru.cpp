@@ -2,13 +2,13 @@
 
 /*Zadanie 2.2
 * --------------------------------------
-* Napisz program przekazuj¹cy tablice z zachowaniem rozmiaru
-* Czy siê da?
-* Jeœli tak to proszê wykonaæ zadanie:
-* - nazwaæ program: ZadPrzekazywanieTablic.cc
-* Jeœli siê nie da to proszê wykonaæ zadanie:
-* - zdefiniowaæ ogóln¹ funkcjê w której nie jest na sztywno ustawiony rozmiar tablicy, która przekazujemy:
-* - nazwaæ program: ZadPrzekazywanieTablicZpodaniemRozmiaru.cc
+* Napisz program przekazujÄ…cy tablice z zachowaniem rozmiaru
+* Czy siÄ™ da?
+* JeÅ›li tak to proszÄ™ wykonaÄ‡ zadanie:
+* - nazwaÄ‡ program: ZadPrzekazywanieTablic.cc
+* JeÅ›li siÄ™ nie da to proszÄ™ wykonaÄ‡ zadanie:
+* - zdefiniowaÄ‡ ogÃ³lnÄ… funkcjÄ™ w ktÃ³rej nie jest na sztywno ustawiony rozmiar tablicy, ktÃ³ra przekazujemy:
+* - nazwaÄ‡ program: ZadPrzekazywanieTablicZpodaniemRozmiaru.cc
 */
 using namespace std;
 int lenght = 3;
@@ -19,7 +19,7 @@ void func(int tab[])
 }
 int main()
 {
-        int table[10] = {0, -2, 4};
+        int table[] = {0, -2, 4};
         for(int i=0;i<lenght;i++)
                 cout<<table[i]<<" ";
         cout<<endl;
