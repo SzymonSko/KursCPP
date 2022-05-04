@@ -1,11 +1,11 @@
 /* Zadanie 3.1 (LArytmetykaWskaznikowZmienne.cc)
  -------------------------------------
- Kierunek adresowania pamiêci
- - wyjaœniæ w komentarzu do programu podaj¹cego przyk³ad:
- - wypisywanie adresów deklarowanych zmiennych
- - nazwaæ program: ZadAdresowaniePamieci.cc
+ Kierunek adresowania pamiÄ™ci
+ - wyjaÅ›niÄ‡ w komentarzu do programu podajÄ…cego przykÅ‚ad:
+ - wypisywanie adresÃ³w deklarowanych zmiennych
+ - nazwaÄ‡ program: ZadAdresowaniePamieci.cc
 
- Adresy zmiennych odzwierciedlaj¹ kolejno przydzielone im miejsce w pamiêci, oddzielone o rozmiar zmiennej
+ Adresy zmiennych odzwierciedlajÄ… kolejno przydzielone im miejsce w pamiÄ™ci, oddzielone o rozmiar zmiennej
 */
 
 #include <iostream>
@@ -23,4 +23,4 @@ int main(){
     cout <<"adress for string: " << &c << '\n' << "Value for string: " << c <<endl;
 
     return 0;
-}
+} 
