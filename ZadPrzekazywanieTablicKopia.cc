@@ -2,8 +2,8 @@
 
 /*Zadanie 2.3
 * --------------------------------------
-* Napisz program przekazuj¹cy kopiê tablicy. (Czy da siê przekazaæ kopiê?)
-* - nazwaæ program: ZadPrzekazywanieTablicKopia.cc
+* Napisz program przekazujÅ¡cy kopiÄ™ tablicy. (Czy da siÄ™ przekazaÄ‡ kopiÄ™?)
+* - nazwaÄ‡ program: ZadPrzekazywanieTablicKopia.cc
 */
 using namespace std;
 int lenght = 3;
@@ -20,4 +20,4 @@ int main()
         cout<<endl;
         func(table);
         return 0;
-}
+} 
