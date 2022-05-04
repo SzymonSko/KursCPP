@@ -1,11 +1,11 @@
 /* Zadanie 3.2 (LArytmetykaWskazikow.cc)
  -------------------------------------
- Wyjaœniæ i[q] gdy i jest 'int', a q jest wskaŸnikiem na tablice
- - wyjaœnienie  w komentarzu w treœci programu!!!!
- - przyk³ad zastosowania
- - nazwaæ program: ZadIq.cc
+ WyjaÅ›niÄ‡ i[q] gdy i jest 'int', a q jest wskaÅºnikiem na tablice
+ - wyjaÅ›nienie  w komentarzu w treÅ›ci programu!!!!
+ - przykÅ‚ad zastosowania
+ - nazwaÄ‡ program: ZadIq.cc
 
-z arytmetyki wskaŸników wiadomo ¿e i[q] oraz q[i] oznacza to sa, nale¿y pamiêtaæ, ¿e i to liczba a q to wskaŸnik
+z arytmetyki wskaÅºnikÃ³w wiadomo Å¼e i[q] oraz q[i] oznacza to sa, naleÅ¼y pamiÄ™taÄ‡, Å¼e i to liczba a q to wskaÅºnik
  */
 #include <iostream>
 
@@ -26,3 +26,4 @@ int main(){
 
 	return 0;
 }
+ 
