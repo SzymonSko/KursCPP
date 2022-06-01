@@ -1,13 +1,13 @@
-/*Zadanie 5.2
+/*Zadanie 5.4
 --------------------------------------
-Stwórz plik z dzia³aj¹ca struktur¹:
-- deklaracja,
-- definicja obiektów (w dowolny sposób):
-  - wywo³anie,
-  - zmiana wartoœci,
-  - odczyt wartoœci,
-  // - czy mo¿na stworzyæ konstruktor (inicjalizacja wartoœci poczatkowych - standard, lista inicjalizacyjna)
-- nazwij program: ZadStruct.cc*/
+Stwórz klase (program: ZadKlasaKonstruktor.cc) oraz structure (program: ZadStructKonstruktor.cc) z przykładami konstruktorów i 
+inicializacją zmiennych:
+- domyślny konstruktor,
+- domyślny destruktor,
+- konstruktor z niepustą liczbą zmiennych argumentów
+- inicjalizacja zmiennych:
+  - 'standardowa',
+  - inicjalizacyjna za pomocą listy inicjalizacyjnej*/
 
 #include<iostream>
 
