@@ -4,6 +4,7 @@
 #include<unistd.h>
 #include <cctype>
 #include <iomanip>
+#include <random>
 using namespace std;
 void login();
 void registration();
@@ -11,6 +12,7 @@ void remind();
 void mainPage();
 void sum();
 void processingBar();
+void plate();
 int price, mark, model, duration, totalprice, count = 0, option, totallimit = 200;
 string limit;
 string name;
@@ -35,7 +37,7 @@ int main()
     cout<<endl;
     cout<<"\t\t\t\t\t |Press 1 to Register"<<setw(17)<<"|"<<endl;
     cout<<"\t\t\t\t\t |Press 2 to Login"<<setw(20)<<"|"<<endl;
-    cout<<"\t\t\t\t\t |Press 4 if You forgot Your password|"<<endl;
+    cout<<"\t\t\t\t\t |Press 3 if You forgot Your password|"<<endl;
     cout <<"\t\t\t\t\t |Press 4 to exit"<<setw(21)<<"|"<<endl;
     cout<<"\t\t\t\t\t    Tell us what You want to do: ";
     cin>>operation;
@@ -122,8 +124,8 @@ int main()
     void remind()
         {
             system("cls");
-            cout<<"\t\t\t\t |Press 1 to remind by username "<<endl;
-            cout<<"\t\t\t\t |Press 2 to go back to main menu "<<endl;
+            cout<<"\t\t\t\t |Press 1 to remind by username  |"<<endl;
+            cout<<"\t\t\t\t |Press 2 to go back to main menu|"<<endl;
             cout<<"\t\t\t\t Tell us what You want to do: ";
             cin>>option;
             cout<<endl;
@@ -132,32 +134,38 @@ int main()
             case 1:
                 {
                 string nlogin, npassword, nlog;
-                cout<<" Enter your login: ";
+                cout<<"\t\t\t\tEnter your login: ";
                 cin>>nlogin;
 
+
                 ifstream f2("credentials.txt");
-                while (f2>>nlogin>>nlog)
+                while (f2>>nlog>>npassword)
                 {
                     if(nlogin==nlog)
                     {
-                        count = 1;
+                        count += 1;
+
                     }
                 }
                 f2.close();
                 if(count==1)
                 {
-                    cout<<"\n\nWe got your account!"<<endl;
-                    cout<<"\n\n Here is your password: "<<npassword;
+                    cout<<"\n\n\t\t\t\tWe got your account!"<<endl;
+                    cout<<"\n\n\t\t\t\tHere is your password: "<<npassword <<endl;
+                    system("pause");
                     main();
                 }
                 else{
-                    cout<<"\n\n There is no account with that login";
+                    cout<<"\n\nThere is no account with that login";
+                    sleep(2);
                     main();
                 }
+
                 break;
                 }
             case 2:
                 cout<<"\n\nBye";
+                sleep(1);
                     main();
             default:
                 system("cls");
@@ -165,6 +173,23 @@ int main()
                 remind();
             }
         }
+    void plate()
+        {
+        carplate="";
+        char alph[27] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+        char num[11] ={"0123456789"};
+        for (int i=0 ; i<3; i++)
+        carplate=carplate + alph[rand() % 27];
+        carplate+= " ";
+        strcat(alph, num);
+        for (int i=0 ; i<4; i++)
+        carplate=carplate + alph[rand() % 37];
+        for (int i=0 ; i<3; i++)
+        carplate=carplate + num[rand() % 11];
+        cout<<carplate;
+        }
+
+
      void sum()
         {
         system("cls");
@@ -184,6 +209,7 @@ int main()
         processingBar();
         system("cls");
         sum();
+        cout<<"\t\t\t\t\tCar plate: ";plate();cout<<endl;
         cout<<" " <<endl;
         cout << "\t\t\t\tThis invoce is  automaticlly generated and it does not"<<endl;
         cout << "\t\t\t\trequire an authorised signture #"<<endl;
@@ -358,10 +384,10 @@ void mainPage()
             cout<<"\t\t\t\t _______________________________________\n\n\n";
             cout<<"\t\t\t\t\t Here is list of Mercedes cars \n\n\n";
             cout<<endl;
-            cout<<"\t\t\t\t |Press 1 to select Mercedes A Class 250 e   |"<<endl;
-            cout<<"\t\t\t\t |Press 2 to select Mercedes EQE 350+        |"<<endl;
-            cout<<"\t\t\t\t |Press 3 to select Mercedes G63 AMG         |"<<endl;
-            cout <<"\t\t\t\t |Press 4 to go back to main menu           |"<<endl;
+            cout<<"\t\t\t\t|Press 1 to select Mercedes A Class 250 e"<<setw(4)<<"|"<<endl;
+            cout<<"\t\t\t\t|Press 2 to select Mercedes EQE 350+"<<setw(9)<<"|"<<endl;
+            cout<<"\t\t\t\t|Press 3 to select Mercedes G63 AMG"<<setw(10)<<"|"<<endl;
+            cout <<"\t\t\t\t|Press 4 to go back to main menu"<<setw(13)<<"|"<<endl;
             cout<<"\t\t\t\t\t Choose your car: ";
             cin >> model;
             switch(model)
@@ -446,7 +472,7 @@ void mainPage()
                 totalprice = price * duration;
                 limit = "Limited";
             }
-            cout<<"\t\t\t\t\tDo you want to see summary? (yes/no lower case only)";
+            cout<<"\t\t\t\t\tDo you want to see summary? (yes/no lower case only): ";
             cin>>summary;
 
             if (summary == "yes")
@@ -455,7 +481,8 @@ void mainPage()
                 cout<<"\t\t\t\t\t\t  Procesing"<<endl;
                 processingBar();
                 sum();
-                cout<<"\t\t\t\t\tContinue to Inovice? (yes/no lower case only)";
+                cout<<"\t\t\t\t\tCar plate is hidden until inovice page"<<endl;
+                cout<<"\t\t\t\t\tContinue to Inovice? (yes/no lower case only): ";
                 cin>>inovice;
 
                 if (inovice=="yes")
@@ -465,22 +492,25 @@ void mainPage()
                 }
                 else if (inovice == "no")
                 {
-                    system("cls");
-                    cout<<"\t\t\t\tOn my way to main page ";
-                    sleep(3);
-                    mainPage();
+                system("cls");
+                cout<<"\t\t\t\tOn my way to previous page, please wait"<<endl;
+                processingBar();
+                system("cls");
+                main();
                 }
-                else if (inovice != "YES" || inovice != "NO")
+                else if (inovice != "yes" || inovice != "no")
                 {
                     system("cls");
                     cout<<"\t\t\t\t\tPlease select from one of above"<<endl;
                     sleep(2);
                     inv();
                 }
-            else if (summary == "NO")
+            else if (summary == "no")
             {
                 system("cls");
-                cout<<" On my way to main page ";
+                cout<<"\t\t\t\tOn my way to previous page, please wait"<<endl;
+                processingBar();
+                system("cls");
                 main();
             }
             system("pause");
@@ -490,10 +520,13 @@ void mainPage()
                 mainPage();
             }
         }
-        else if (decide == "NO")
+        else if (decide == "no")
         {
-            system("cls");
-            mainPage();
+                system("cls");
+                cout<<"\t\t\t\tOn my way to previous page, please wait"<<endl;
+                processingBar();
+                system("cls");
+                main();
         }
         else{
             system("cls");
