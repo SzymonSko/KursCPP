@@ -87,6 +87,7 @@ int main()
     }
     void login()
     {
+        count = 0;
         string login, password, log, pass;
         system("cls");
         cout<<"\t\t\t\t\t Enter your Login and Password: "<<endl;
@@ -123,6 +124,7 @@ int main()
     }
     void remind()
         {
+            option =0;
             system("cls");
             cout<<"\t\t\t\t |Press 1 to remind by username  |"<<endl;
             cout<<"\t\t\t\t |Press 2 to go back to main menu|"<<endl;
