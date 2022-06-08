@@ -43,11 +43,6 @@ int main()
     cin>>operation;
 
     cout<<endl;
-    if (operation !=4){
-            system("cls");
-    cout<<"\t\t\t\t\t\t  Processing"<<endl;
-    processingBar();
-    }
     switch(operation)
         {
         case 1:
